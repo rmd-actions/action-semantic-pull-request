@@ -1,5 +1,21 @@
 # Changelog
 
+## [6.0.1](https://github.com/amannn/action-semantic-pull-request/compare/v6.0.0...v6.0.1) (2025-08-13)
+
+### Bug Fixes
+
+* Actually execute action ([#289](https://github.com/amannn/action-semantic-pull-request/issues/289)) ([58e4ab4](https://github.com/amannn/action-semantic-pull-request/commit/58e4ab40f59be79f2c432bf003e34a31174e977a))
+
+## [6.0.0](https://github.com/amannn/action-semantic-pull-request/compare/v5.5.3...v6.0.0) (2025-08-13)
+
+### ⚠ BREAKING CHANGES
+
+* Upgrade action to use Node.js 24 and ESM (#287)
+
+### Features
+
+* Upgrade action to use Node.js 24 and ESM ([#287](https://github.com/amannn/action-semantic-pull-request/issues/287)) ([bc0c9a7](https://github.com/amannn/action-semantic-pull-request/commit/bc0c9a79abfe07c0f08c498dd4a040bd22fe9b79))
+
 ## [5.5.3](https://github.com/amannn/action-semantic-pull-request/compare/v5.5.2...v5.5.3) (2024-06-28)
 
 

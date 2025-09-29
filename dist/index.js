@@ -31303,9 +31303,11 @@ function parseConfig() {
 
   let headerPatternCorrespondence;
   if (process.env.INPUT_HEADERPATTERNCORRESPONDENCE) {
-    headerPatternCorrespondence = ConfigParser.parseString(
-      process.env.INPUT_HEADERPATTERNCORRESPONDENCE
-    );
+    // todo: this should be migrated to an enum w/ ConfigParser.parseEnum
+    headerPatternCorrespondence =
+      process.env.INPUT_HEADERPATTERNCORRESPONDENCE.split(',')
+        .map((part) => part.trim())
+        .filter((part) => part.length > 0);
   }
 
   let wip;
@@ -32542,11 +32544,11 @@ async function validatePrTitle(
     raiseError(`No subject found in pull request title "${prTitle}".`);
   }
 
-  if (!types.includes(result.type)) {
+  if (!types.some((type) => new RegExp(`^${type}$`).test(result.type))) {
     raiseError(
       `Unknown release type "${
         result.type
-      }" found in pull request title "${prTitle}". \n\n${printAvailableTypes()}`
+      }" found in pull request title "${prTitle}".\n\n${printAvailableTypes()}`
     );
   }
 

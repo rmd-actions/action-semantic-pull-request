@@ -16,7 +16,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
       - run: pnpm install
@@ -28,8 +28,17 @@ jobs:
           # Configure which types are allowed (newline-delimited).
           # Default: https://github.com/commitizen/conventional-commit-types
           types: |
-            fix
             feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
           # Configure which scopes are allowed (newline-delimited).
           # These are regex patterns auto-wrapped in `^ $`.
           scopes: |

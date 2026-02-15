@@ -36,7 +36,7 @@ on:
 jobs:
   main:
     name: Validate PR title
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       pull-requests: read
     steps:
@@ -137,7 +137,7 @@ permissions:
 jobs:
   main:
     name: Validate PR title
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       pull-requests: read
     steps:
@@ -199,9 +199,7 @@ permissions:
 jobs:
   main:
     name: Validate PR title
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: read
+    runs-on: ubuntu-slim
     steps:
       - uses: amannn/action-semantic-pull-request@v6
         id: lint_pr_title

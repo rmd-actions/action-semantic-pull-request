@@ -1,6 +1,6 @@
 name: 'Lint PR title'
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - edited
@@ -16,7 +16,7 @@ jobs:
       - uses: pnpm/action-setup@v6
         with:
           version: 9
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - uses: ./
